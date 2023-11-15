@@ -3,6 +3,7 @@ import axios from 'axios';
 import { NextApiRequest, NextApiResponse } from 'next/';
 
 import runMiddleware from './cors';
+
 // Adjust the import path based on your project structure
 import { Prdmst } from 'src/types/inventory/InventoryListType';
 

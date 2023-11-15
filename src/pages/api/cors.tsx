@@ -11,7 +11,8 @@ export default function runMiddleware(
     res: NextApiResponse,
     handler: (req: NextApiRequest, res: NextApiResponse) => Promise<void>
 ): Promise<void> {
-    // Newline before return statement
+
+
     return new Promise((resolve, reject) => {
         cors(req, res, (result: any) => {
             if (result instanceof Error) {
