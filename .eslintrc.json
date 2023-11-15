@@ -20,9 +20,9 @@
         "beforeLineComment": false,
         "beforeBlockComment": false,
         "allowBlockStart": false,
-        "allowClassStart": true,
-        "allowObjectStart": true,
-        "allowArrayStart": true
+        "allowClassStart": false,
+        "allowObjectStart": false,
+        "allowArrayStart": false
       }
     ],
     // add new line above return

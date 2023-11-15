@@ -1,6 +1,5 @@
 // ** Redux Imports
-import { Dispatch } from 'redux'
-import { createSlice, createAsyncThunk,AsyncThunk  } from '@reduxjs/toolkit'
+import { createSlice, createAsyncThunk  } from '@reduxjs/toolkit'
 
 // ** Axios Imports
 import axios from 'axios'

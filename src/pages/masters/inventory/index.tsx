@@ -12,7 +12,7 @@ import { IconButton, Typography, useMediaQuery } from '@mui/material'
 import InventoryList from 'src/views/master/inventory/InventoryList'
 import InventoryForm from 'src/views/master/inventory/InventortyForm';
 import { Icon } from '@iconify/react';
-import { SyntheticEvent, useState } from 'react';
+import { useState } from 'react';
 
 const Inventory = () => {
 
