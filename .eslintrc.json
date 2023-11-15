@@ -6,8 +6,6 @@
   ],
   "rules": {
     "react/display-name": "off",
-    "@next/next/no-img-element": "off",
-    "react/no-unescaped-entities": "off",
     "import/no-anonymous-default-export": "off",
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/ban-ts-comment": "off",
@@ -26,14 +24,9 @@
       }
     ],
     // add new line above return
-    "newline-before-return": "error",
+    "newline-before-return": "off",
     // add new line below import
-    "import/newline-after-import": [
-      "error",
-      {
-        "count": 1
-      }
-    ],
+    "import/newline-after-import": "off",
     "@typescript-eslint/ban-types": [
       "error",
       {
@@ -42,7 +35,9 @@
           "{}": false
         }
       }
-    ]
+    ],
+    "@next/next/no-img-element": "off",
+    "react/no-unescaped-entities": "off"
   },
   "plugins": [
     "import"
