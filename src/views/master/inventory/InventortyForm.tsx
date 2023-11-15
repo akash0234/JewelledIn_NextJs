@@ -1,8 +1,8 @@
 // ** React Imports
-import { ChangeEvent, forwardRef, MouseEvent, SyntheticEvent, useState } from 'react'
+import { SyntheticEvent, useState } from 'react'
 import Grid from '@mui/material/Grid'; // Grid version 1
-import { DatePicker, TabContext, TabList, TabPanel } from '@mui/lab'
-import { InputLabel, Select, OutlinedInput, InputAdornment, MenuItem, Button, CardActions, CardContent, Divider, FormControl, Tab, TextField, Typography, SelectChangeEvent } from '@mui/material'
+import { TabContext, TabList, TabPanel } from '@mui/lab'
+import { InputLabel, Select, OutlinedInput, MenuItem, Button, CardActions, CardContent, Divider, FormControl, Tab, TextField, SelectChangeEvent } from '@mui/material'
 
 const InventoryForm = () => {
 
