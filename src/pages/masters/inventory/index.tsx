@@ -59,8 +59,7 @@ const Inventory = () => {
               backgroundColor: 'rgba(0,0,0,.1)',
               outline: '1px solid slategrey'
             },
-
-            height: `${isDropDownOpen && isSmallScreen ? 'auto' : '0px'}`,
+            height: isSmallScreen ? (isDropDownOpen ? 'auto' : '0px') : 'auto',
             marginBottom: `${isDropDownOpen ? '0px' : '10px'}`,
             transition: `${isDropDownOpen ? 'max-height 0.5s ease-out, opacity 0.5s ease-out' : 'min-height 0.5s ease-in, opacity 0.5s ease-in'}`
 

@@ -1,7 +1,11 @@
 import axios from 'axios';
+
 import { NextApiRequest, NextApiResponse } from 'next/';
-import runMiddleware from './cors'; // Adjust the import path based on your project structure
+
+import runMiddleware from './cors';
+// Adjust the import path based on your project structure
 import { Prdmst } from 'src/types/inventory/InventoryListType';
+
 async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
   try {
     const response = await axios.get('http://116.73.25.127:8069/WebService.asmx/GetJsonDATA?QueryNo=12&co_code=A&invcode=&opncl=D&co_id=yj jewellers&b_code=341&txntyp=IS&docod=XX&docno=544&user_id=1&acode=XX&sessionId=sahil&JSONStringFormat1=[{}]');
