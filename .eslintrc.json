@@ -17,9 +17,9 @@
     "lines-around-comment": [
       "error",
       {
-        "beforeLineComment": true,
-        "beforeBlockComment": true,
-        "allowBlockStart": true,
+        "beforeLineComment": false,
+        "beforeBlockComment": false,
+        "allowBlockStart": false,
         "allowClassStart": true,
         "allowObjectStart": true,
         "allowArrayStart": true
