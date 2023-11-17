@@ -1,3 +1,4 @@
+// pages/api/[get_all_inventory_api].tsx
 import axios from 'axios';
 
 import { NextApiRequest, NextApiResponse } from 'next/';

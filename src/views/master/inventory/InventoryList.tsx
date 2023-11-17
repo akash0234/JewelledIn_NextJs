@@ -12,22 +12,19 @@ import Skeleton from "react-loading-skeleton"
 import { useDispatch, useSelector } from "react-redux"
 import { AppDispatch, RootState } from "src/store"
 import { Prdmst } from "src/types/inventory/InventoryListType"
-import { fetchData } from 'src/store/masters/inventory'
+import { fetchData, fetchInventoryData } from 'src/store/masters/inventory'
+
 
 const InventoryList = () => {
     // ** State
     const [selectedIndex, setSelectedIndex] = useState<number>(1)
 
-    const handleListItemClick = (index: number) => {
-        console.log(index)
-        setSelectedIndex(index)
-    }
 
 
     // ** Hooks
     const dispatch = useDispatch<AppDispatch>()
     const store = useSelector((state: RootState) => state.inventory)
-
+    console.log(store.data)
     useEffect(() => {
         dispatch(
             fetchData()
@@ -35,7 +32,16 @@ const InventoryList = () => {
 
     }, [dispatch])
 
+    const handleListItemClick = async (invcod: string) => {
 
+
+        const result = await dispatch(fetchInventoryData(invcod));
+        const inventoryDetails = result.payload as Prdmst
+        console.log(inventoryDetails)
+        //setSelectedIndex(index)
+    }
+
+    /*Check If Store Has component Data */
 
     return (
         <>
@@ -48,8 +54,9 @@ const InventoryList = () => {
 
             }}>
                 {store.data.map((item: Prdmst, index: number) => (
+
                     <ListItem disablePadding key={index} >
-                        <ListItemButton selected={selectedIndex === 0} onClick={() => handleListItemClick(index)} sx={{
+                        <ListItemButton selected={selectedIndex === 0} onClick={() => handleListItemClick(item.invcod)} sx={{
                             '&:after': {
                                 height: '1px', content: '""', width: 'Calc(100% - 30px)', position: 'absolute', bottom: 0, bgcolor: '#cccccc73'
                             }
@@ -70,6 +77,7 @@ const InventoryList = () => {
             </List>
         </>
     )
+
 
 }
 export default InventoryList
