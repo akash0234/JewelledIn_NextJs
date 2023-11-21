@@ -14,6 +14,7 @@ import InventoryForm from 'src/views/master/inventory/InventortyForm';
 import { Icon } from '@iconify/react';
 import { useState } from 'react';
 
+
 const Inventory = () => {
 
   const [isDropDownOpen, setDroDown] = useState<boolean>(false);
@@ -61,9 +62,8 @@ const Inventory = () => {
             },
             height: isSmallScreen ? (isDropDownOpen ? 'auto' : '0px') : 'auto',
             marginBottom: `${isDropDownOpen ? '0px' : '10px'}`,
-            transition: `${isDropDownOpen ? 'max-height 0.5s ease-out, opacity 0.5s ease-out' : 'min-height 0.5s ease-in, opacity 0.5s ease-in'}`
-
-
+            transition: `${isDropDownOpen ? 'max-height 0.5s ease-out, opacity 0.5s ease-out' : 'min-height 0.5s ease-in, opacity 0.5s ease-in'}`,
+            borderBottom: isSmallScreen ? (isDropDownOpen ? 'auto' : '0px') : 'auto',
           }} >
             <InventoryList />
 
