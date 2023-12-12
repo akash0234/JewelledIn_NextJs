@@ -13,12 +13,14 @@ import { useDispatch, useSelector } from "react-redux"
 import { AppDispatch, RootState } from "src/store"
 import { Prdmst } from "src/types/inventory/InventoryListType"
 import { fetchData, fetchInventoryData } from 'src/store/masters/inventory'
+import router from 'next/router'
 
 
 const InventoryList = () => {
     // ** State
     const [selectedIndex, setSelectedIndex] = useState<number>(1)
 
+    const { id } = router.query;
 
 
     // ** Hooks
